@@ -6,7 +6,6 @@
 # @Software: PyCharm
 import requests
 import time
-import math
 import re
 import redis
 import random
@@ -17,7 +16,7 @@ from tools import Log, timer
 class OA_operat(object):
 
     def __init__(self, **kwargs):
-        redis_pool = redis.ConnectionPool(host = 'localhost', port = 6379, db = 6, decode_responses = True)
+        redis_pool = redis.ConnectionPool(host = '10.30.44.187', port = 6379, db = 6, decode_responses = True)
         redis_conn = redis.Redis(connection_pool = redis_pool)
         self.redis = redis_conn
 
