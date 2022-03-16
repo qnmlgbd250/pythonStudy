@@ -6,9 +6,17 @@
 # @Software: PyCharm
 
 s ='''
-url: https://mp.weixin.qq.com/s/-nG1oUm8dzeOjn4hos9RMg
-plan_num: 10
-type: 1
+jsv: 2.5.8
+appKey: 12574478
+t: 1647349611527
+sign: 7448965c0f6c0ce6ee5528c9da965253
+api: mtop.taobao.idle.awesome.detail
+v: 1.0
+dataType: json
+valueType: string
+preventFallback: true
+type: json
+data: {"itemId":"670539526494"}
 '''
 
 

@@ -4,13 +4,25 @@
 # @Email   : zcshiyonghao@163.com
 # @File    : 简单验证码.py
 # @Software: PyCharm
-import pytesseract
-from PIL import Image
+# import pytesseract
+# from PIL import Image
+#
+# image = Image.open("img_1.png")
+# result = pytesseract.image_to_string(image,lang='chi_sim')
+# print(result)
+# print(type(result))
 
-image = Image.open("img_1.png")
-result = pytesseract.image_to_string(image,lang='chi_sim')
-print(result)
-print(type(result))
+import ddddocr
+ocr = ddddocr.DdddOcr()
+
+with open("img_1", 'rb') as f:
+
+    img_bytes = f.read()
+
+res = ocr.classification(img_bytes)
+
+print(res)
+
 
 
 
