@@ -6,17 +6,13 @@
 # @Software: PyCharm
 
 s ='''
-jsv: 2.5.8
-appKey: 12574478
-t: 1647349611527
-sign: 7448965c0f6c0ce6ee5528c9da965253
-api: mtop.taobao.idle.awesome.detail
-v: 1.0
-dataType: json
-valueType: string
-preventFallback: true
-type: json
-data: {"itemId":"670539526494"}
+Host: aip.baidubce.com
+Connection: keep-alive
+Content-Length: 121538
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN
+Content-Type: application/x-www-form-urlencoded
 '''
 
 

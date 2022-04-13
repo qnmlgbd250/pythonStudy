@@ -550,3 +550,157 @@
 #
 # foo__ = [foo[2],foo[1],foo[0]]
 # print(foo__)
+
+# dict = {"name": "zs", "age": 18, "city": "深圳", "tel": "1362626627"}
+# foo_ = sorted(dict.items(), key = lambda x: x[0], reverse = False)
+# print(foo_)
+# new_dict = {}
+# for i in foo_:
+#     new_dict[i[0]] = i[1]
+# print(new_dict)
+
+alist = [1, 2, 3, 1, 1, 3, 4, 5, 1, 7, 1, 3, 4, 8, 9]
+astr = "kjalfj;ldsjafl;hdsllfdhg;lahfbl;hl;ahlf;h"
+a_str = ' not found 404 张三 深圳'
+
+
+def f_list(list_: list):
+    list_to_set = set(list_)
+    new_list = list(list_to_set)
+    print(new_list)
+
+
+def f_list_2(list_: list):
+    new_list = []
+    for i in list_:
+        if i not in new_list:
+            new_list.append(i)
+    print(new_list)
+
+
+def f_list_3(list_: list):
+    for i in list_:
+        if list_.count(i) != 1:
+            for x in range((list_.count(i) - 1)):
+                list_.remove(i)
+    print(list_)
+
+
+def count_str(str_):
+    from collections import Counter
+    d_connter = Counter(str_)
+    print(d_connter)
+
+
+def op_str(str_):
+    one_str_list_ = set(str_)
+    one_str_list = list(one_str_list_)
+    one_str_list.sort(reverse = False)
+    one_str = ''.join(one_str_list)
+    print(one_str)
+
+
+def op_list_str(list_str):
+    import re
+    list_ = list_str.split(' ')
+    ret = re.findall(r'\d+|[a-zA-z]+', list_str)
+    for i in ret:
+        if i in list_:
+            list_.remove(i)
+    end_str = ''.join(list_)
+    print(end_str)
+
+
+def fitter_(list_):
+    new_fitt = filter(lambda s: s % 2 == 1, list_)
+    print(list(new_fitt))
+
+
+def op_list01(list_):
+    new_list = [i for i in list_ if i % 2 == 1]
+    print(new_list)
+
+
+def op_list02(list1, list2):
+    list1.extend(list2)
+    list1.sort(reverse = False)
+    print(list1)
+
+
+def op_time():
+    import datetime
+    now_time = str(
+        datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + '星期：' + str(datetime.datetime.now().isoweekday()))
+    print(now_time)
+
+
+def op_exception():
+    try:
+        for i in range(1, 10):
+            if i > 2:
+                raise Exception('数字大于2了')
+    except Exception as e:
+        print(e)
+
+
+def op_list03(list1):
+    # list_ = [e for list1_ in list1 for e in list1_]
+    list_ = sum(list1, [])
+    print(list_)
+
+
+def op_list04():
+    x = 'abc'
+    y = 'def'
+    z = ['d', 'e', 'f']
+
+    print(x.join(y))
+    print(x.join(z))
+
+
+def op_list04(list_):
+    new_list = []
+    while len(list_) > 0:
+        min_ = min(list_)
+        list_.remove(min_)
+        new_list.append(min_)
+    print(new_list)
+
+
+def op_str01(str_, num_):
+    print(round(float(str_), num_))
+
+
+def op_dict(dict_, key_):
+    # dict_.pop(key_)
+    del dict_[key_]
+    print(dict_)
+
+
+foo = [-5, 8, 0, 4, 9, -4, -20, -2, 8, 2, -4]
+
+
+def op_list04(list_):
+    foo_ = sorted(list_, key = lambda x: (x < 0, abs(x)))
+    print(foo_)
+
+
+def find_max_index(list_):
+    max_index = 0
+    list_index = 0
+    for i in list_:
+        if i > list_[max_index]:
+            max_index = list_index
+        list_index += 1
+    print(max_index)
+
+
+def op_list05(list_):
+    foo_ = sorted(list_, key = lambda x: (x['age'], x['name']))
+    print(foo_)
+
+
+if __name__ == '__main__':
+    op_list05([{"name": "zs", "age": 19}, {"name": "ll", "age": 54},
+
+               {"name": "wa", "age": 19}, {"name": "df", "age": 23}])
